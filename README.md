@@ -1,2 +1,25 @@
 # EBSDDownsampler_MTEX
-EBSDDownsampler_MTEX 是一个基于 MTEX 的 MATLAB 脚本，用于对 ANG 格式 EBSD 数据进行下采样，并绘制原始与下采样的 IPF-Z 图。
+
+## 功能简介
+`EBSDDownsampler_MTEX` 是一个基于 MTEX 的 MATLAB 脚本，用于对 ANG 格式 EBSD 数据进行下采样，并绘制原始与下采样的 IPF-Z 图。
+
+## 主要功能
+1. 读取原始 `.ang` EBSD 文件并检查数据有效性。  
+2. 保留已索引点，绘制原始 EBSD IPF-Z 图。  
+3. 将 EBSD 数据转换为规则网格并进行下采样。  
+4. 导出下采样后的 EBSD 文件（MTEX 默认表头格式）。  
+5. 绘制下采样后的 IPF-Z 图，并可与原始数据进行并排对比。
+
+## 使用说明
+- 设置输入文件路径 `inputFile` 和输出文件路径 `outputFile`。  
+- 调整下采样倍数 `factor` 控制下采样精度。  
+- 运行脚本即可生成下采样文件，并自动绘制原始与下采样 IPF-Z 图。
+
+## 重要提示
+- 下采样后的 ANG 文件采用 **MTEX 默认表头格式**，**无法直接在 OIM 中打开**。  
+- 若希望在 OIM 中使用，需要手动将导出的数据替换原 ANG 文件的表头或按 OIM 格式调整表头信息。
+
+## 适用范围
+- 单相 EBSD 数据  
+- ANG 文件格式（OIM 输出）  
+- MTEX 环境下 MATLAB 运行
